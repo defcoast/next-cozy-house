@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React, {Suspense} from 'react';
 import {NextFont} from 'next/dist/compiled/@next/font';
+import {Metrika} from '@/components/Metrika';
 
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
@@ -40,7 +41,7 @@ export default function RootLayout({
         {children}
 
         <Suspense>
-          {/*<YandexMetrika /> todo пофиксить метрику*/}
+          <Metrika />
         </Suspense>
       </body>
     </html>

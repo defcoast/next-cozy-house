@@ -24,7 +24,7 @@ const SectionExample: FC = (): JSX.Element => {
             <PhotoProvider>
                 <div className={styles.images}>
                     {exampleImages.map((item: IExampleImagesData, index: number) => (
-                    <PhotoView key={index} src={typeof item.preview === 'string' ? item.preview : undefined}>
+                    <PhotoView key={index} src={String(item?.original)}>
                         <Image
                             src={item.preview}
                             alt={`Изображение наших работ ${index + 1}`}
