@@ -1,6 +1,6 @@
 "use client"
 
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX } from 'react';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
 import {tel, whatsAppLink} from '@/globalParams';
 import {domAnimation, LazyMotion, m} from 'framer-motion';
@@ -17,16 +17,16 @@ import Image from 'next/image';
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {
     /** Хук наблюдателя пересечений изображения станции. */
-    const [refStation, inViewStation] = useInView({triggerOnce: true}) as LegacyRef<HTMLDivElement>;
+    const [refStation, inViewStation] = useInView({triggerOnce: true});
 
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true}) as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Хук наблюдателя пересечений изображения заголовка. */
-    const [refTitle, inViewTitle] = useInView({triggerOnce: true}) as LegacyRef<HTMLHeadingElement>;
+    const [refTitle, inViewTitle] = useInView({triggerOnce: true});
 
     /** Хук наблюдателя пересечений изображения описания. */
-    const [refDescription, inViewDescription] = useInView({triggerOnce: true}) as LegacyRef<HTMLParagraphElement>;
+    const [refDescription, inViewDescription] = useInView({triggerOnce: true});
 
     /** Анимация изображения. */
     const animationImage = {

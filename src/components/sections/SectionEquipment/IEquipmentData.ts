@@ -1,3 +1,5 @@
+import {StaticImageData} from 'next/image';
+
 /** Интерфейс модели данных оборудования. */
 export interface IEquipmentData {
     /** Идентификатор элемента. */
@@ -10,5 +12,5 @@ export interface IEquipmentData {
     descriptionPoints: string[];
 
     /** Изображение блока. */
-    image: string;
+    image: string | StaticImageData;
 }

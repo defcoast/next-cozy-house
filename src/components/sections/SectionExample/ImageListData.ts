@@ -4,14 +4,15 @@ import ImagePreview3 from '../../../assets/images/examples/previews/expw_3.webp'
 import ImagePreview4 from '../../../assets/images/examples/previews/expw_4.webp';
 import ImagePreview5 from '../../../assets/images/examples/previews/expw_5.webp';
 import ImagePreview6 from '../../../assets/images/examples/previews/expw_6.webp';
+import {StaticImageData} from 'next/image';
 
 /** Интерфейс данных изображений. */
 export interface IExampleImagesData {
     /** Ссылка на превью. */
-    preview:  string,
+    preview:  string | StaticImageData,
 
     /** Ссылка на оригинальное изображение. */
-    original: string,
+    original: string | StaticImageData,
 }
 
 /** Список изображений. */

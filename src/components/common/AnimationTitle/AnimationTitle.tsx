@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef, ReactNode} from 'react';
+import {FC, JSX, ReactNode} from 'react';
 import {useInView} from 'react-intersection-observer';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
 import {AnimationForTitle} from '@/animations/AnimationForTitle';
@@ -19,7 +19,7 @@ const AnimationTitle: FC<IProps> = (
     className,
 }): JSX.Element => {
     /** Хук наблюдателя пересечений заголовка. */
-    const [refTitle, inViewTitle] = useInView({triggerOnce: true}) as LegacyRef<HTMLHeadingElement>;
+    const [refTitle, inViewTitle] = useInView({triggerOnce: true});
 
     return (
     <LazyMotion features={domAnimation}>

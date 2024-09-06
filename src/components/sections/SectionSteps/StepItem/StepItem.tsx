@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX} from 'react';
 import styles from '../SectionSteps.module.scss';
 import classNames from 'classnames';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
@@ -13,7 +13,7 @@ interface IProps {
 /** Элемент "шаг". */
 const StepItem: FC<IProps> = ({step}): JSX.Element => {
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true})  as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationList = {

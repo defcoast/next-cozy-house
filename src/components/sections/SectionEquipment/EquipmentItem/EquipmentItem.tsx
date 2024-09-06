@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX } from 'react';
 import {IEquipmentData} from '../IEquipmentData';
 import styles from './EquipmentItem.module.scss';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
@@ -13,7 +13,7 @@ interface IProps {
 /** Элемент "оборудование". */
 const EquipmentItem: FC<IProps> = ({equipment}): JSX.Element => {
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true}) as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationList = {

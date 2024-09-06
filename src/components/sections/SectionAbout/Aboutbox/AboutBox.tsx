@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX} from 'react';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
 import styles from '../SectionAbout.module.scss';
 import PaintedText from '../../../common/PaintedText/PaintedText';
@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 /** Блок "Что такое механизированная штукатурка". */
 const AboutBox: FC = (): JSX.Element => {
-    const [refBox, inViewBox] = useInView({triggerOnce: true})  as LegacyRef<HTMLDivElement>;
+    const [refBox, inViewBox] = useInView({triggerOnce: true});
 
     /** Анимация контейнера. */
     const animationBox = {

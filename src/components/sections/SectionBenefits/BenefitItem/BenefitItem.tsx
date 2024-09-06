@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX } from 'react';
 import styles from '../SectionBenefits.module.scss';
 import PaintedText from '../../../common/PaintedText/PaintedText';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
@@ -23,7 +23,7 @@ const BenefitItem: FC<IProps> = (
     index,
 }): JSX.Element => {
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true}) as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationList = {

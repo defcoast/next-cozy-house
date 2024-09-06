@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX} from 'react';
 import {INumberData} from '../INumberData';
 import styles from './NumberItem.module.scss';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
@@ -12,7 +12,7 @@ interface IProps {
 /** Элемент списка "Мы в цифрах". */
 const NumberItem: FC<IProps> = ({numberData}): JSX.Element => {
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true}) as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationList = {

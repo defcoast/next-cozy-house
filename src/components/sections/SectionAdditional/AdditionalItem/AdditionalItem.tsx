@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX } from 'react';
 import styles from '../SectionAdditional.module.scss';
 import {IAdditionalData} from '../IAdditionalData';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
@@ -12,7 +12,7 @@ interface IProps {
 /** Элемент списка "Дополнительное". */
 const AdditionalItem: FC<IProps> = ({additional}): JSX.Element => {
     /** Хук наблюдателя пересечений списка. */
-    const [refList, inViewList] = useInView({triggerOnce: true})  as LegacyRef<HTMLLIElement>;
+    const [refList, inViewList] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationList = {

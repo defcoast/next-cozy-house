@@ -1,6 +1,6 @@
 "use client"
 
-import React, {FC, LegacyRef,} from 'react';
+import React, {FC } from 'react';
 import Wrapper from '../../common/Wrapper/Wrapper';
 import styles from './SectionAction.module.scss';
 import AnimationTitle from '../../common/AnimationTitle/AnimationTitle';
@@ -16,7 +16,7 @@ import Image from 'next/image';
 const SectionAction: FC = () => {
 
     /** Хук наблюдателя пересечений списка. */
-    const [refBrigade, inViewBrigade] = useInView({triggerOnce: true}) as LegacyRef<HTMLDivElement>;
+    const [refBrigade, inViewBrigade] = useInView({triggerOnce: true});
 
     /** Анимация списка. */
     const animationBrigade = {

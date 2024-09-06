@@ -1,4 +1,4 @@
-import {FC, JSX, LegacyRef} from 'react';
+import {FC, JSX } from 'react';
 import styles from './Attention.module.scss';
 import classNames from 'classnames';
 import Tel from '../../../common/Tel/Tel';
@@ -12,7 +12,7 @@ import {useInView} from 'react-intersection-observer';
 const Attention: FC = (): JSX.Element => {
 
     /** Хук наблюдателя пересечений контейнера. */
-    const [refBox, inViewBox] = useInView({triggerOnce: true}) as LegacyRef<HTMLLIElement>;
+    const [refBox, inViewBox] = useInView({triggerOnce: true});
 
     /** Анимация контейнера. */
     const animationBox = {
