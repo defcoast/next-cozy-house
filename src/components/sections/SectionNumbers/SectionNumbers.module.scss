@@ -1,0 +1,32 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.numbers {
+	width:            100%;
+	background-color: $black;
+	padding:          110px 0 60px;
+}
+
+.title {
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+	color:       $white;
+	max-width:   772px;
+
+	@include mobile {
+		font-size: 26px;
+	}
+}
+
+.list {
+	margin-top: 60px;
+	display:    flex;
+	gap:        30px;
+	flex-flow:  wrap;
+
+	@include laptop {
+		justify-content: center;
+	}
+}
+

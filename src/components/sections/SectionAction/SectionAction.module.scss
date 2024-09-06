@@ -1,0 +1,218 @@
+@import '../../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
+
+.action {
+	width:            100%;
+	background-color: $black;
+	padding:          120px 0 90px;
+
+	@include mobile {
+		padding: 40px 0 43px;
+	}
+}
+
+.wrapper {
+	position: relative;
+
+	@include laptop {
+		padding: 0;
+	}
+}
+
+.title {
+	font-weight:   700;
+	font-size:     45px;
+	line-height:   1.15;
+	color:         $white;
+	margin-bottom: 65px;
+	padding:       0 20px;
+	max-width:     100%;
+
+	@include mobile {
+		text-align: center;
+		font-size:  26px;
+		margin:     0 auto 30px;
+	}
+}
+
+.content {
+	display:         flex;
+	gap:             0 66px;
+	align-items:     center;
+	justify-content: space-between;
+	position:        relative;
+	padding:         20px;
+
+	@include tablet {
+		flex-flow: column;
+	}
+
+	@include mobile {
+		align-items: unset;
+		padding:     0;
+	}
+}
+
+.brigade {
+	width:      100%;
+	max-width:  676px;
+	margin:     0 0 24px;
+	object-fit: contain;
+
+	@media screen and (max-width: $end-tablet-point) {
+		padding-left: unset;
+	}
+
+	@include mobile {
+		padding: 0 20px;
+	}
+}
+
+.imgBrigade {
+	width: 100%;
+}
+
+.infoBox {
+	max-width:     477px;
+	width:         100%;
+	height:        222px;
+	border-radius: 10px;
+	padding:       20px 18px;
+	position:      relative;
+	background:    $primary;
+	background:    linear-gradient(185deg, rgba(255, 176, 0, 1) 86%, rgba(0, 0, 0, 1) 14%);
+	min-width:     477px;
+
+	@include mobile {
+		width:         100%;
+		min-width:     unset;
+		max-width:     unset;
+		background:    $primary;
+		border-radius: unset;
+	}
+
+	@media screen and (max-width: 480px) {
+		display:     flex;
+		align-items: center;
+	}
+}
+
+.info {
+	font-weight: 400;
+	font-size:   18px;
+	line-height: 1.22;
+	color:       $black;
+	max-width:   300px;
+
+	@include mobile {
+		margin-bottom: 22px;
+	}
+
+	@media screen and (max-width: 480px) {
+		max-width:     unset;
+		width:         max-content;
+		margin-bottom: 0;
+	}
+}
+
+.img {
+	&:before {
+		content:         '';
+		display:         block;
+		width:           100%;
+		max-width:       200px;
+		height:          146px;
+		background:      url('../../../assets/images/action/opt.webp') center center no-repeat;
+		background-size: contain;
+		position:        absolute;
+		right:           0;
+		bottom:          -5px;
+		margin-right:    10px;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+			width:   0;
+		}
+	}
+}
+
+.form {
+	max-width:       477px;
+	width:           100%;
+	border-radius:   10px;
+	padding:         66px 76px 32px;
+	display:         flex;
+	justify-content: center;
+	flex-flow:       column;
+	background:      $primary;
+	background:      linear-gradient(4deg, rgba(255, 176, 0, 1) 91%, rgba(0, 0, 0, 1) 55%);
+	align-items:     center;
+
+	@include mobile {
+		max-width:     unset;
+		background:    $primary;
+		border-radius: unset;
+		margin-top:    48px;
+		padding:       78px 20px 32px;
+		align-items:   center;
+	}
+}
+
+.formTitle {
+	font-weight: 500;
+	font-size:   24px;
+	line-height: 1.20;
+	color:       $black;
+	max-width:   322px;
+
+	@include mobile {
+		text-align: center;
+	}
+}
+
+.input {
+	border:        none;
+	outline:       none;
+	padding:       15px;
+	font-weight:   400;
+	font-size:     16px;
+	line-height:   1.18;
+	color:         $black;
+	background:    $platinum;
+	box-shadow:    2px 4px 10px rgba(0, 0, 0, .1);
+	border-radius: 10px;
+	margin-top:    16px;
+	display:       block;
+	width:         100%;
+
+	&::placeholder {
+		color: $placeholder;
+	}
+}
+
+.error {
+	color:      red;
+	margin-top: 4px;
+	display:    none;
+
+	&Visible {
+		display: block;
+	}
+}
+
+.success {
+	color:      $success-msg;
+	margin-top: 4px;
+	display:    none;
+
+	&Visible {
+		display: block;
+	}
+}
+
+.btn {
+	margin-top: 34px;
+	width:      100%;
+	max-width:  285px;
+	cursor:     pointer;
+}

@@ -1,0 +1,101 @@
+@import '../../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
+
+.benefits {
+	background-color: $primary;
+	width:            100%;
+	padding-bottom:   60px;
+}
+
+.title {
+	font-style:  normal;
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+	color:       $black;
+	max-width:   916px;
+
+	@include mobile {
+		font-size:  26px;
+		text-align: center;
+	}
+}
+
+.list {
+	margin-top:      64px;
+	display:         flex;
+	gap:             34px;
+	align-items:     center;
+	justify-content: space-between;
+	flex-flow:       wrap;
+
+	@media screen and (max-width: 1200px) {
+		justify-content: center;
+	}
+
+	@include mobile {
+		margin-top: 44px;
+	}
+}
+
+.item {
+	width:            100%;
+	max-width:        266px;
+	height:           232px;
+	background-color: $black;
+	padding:          16px 16px 43px;
+	box-shadow:       2px 4px 10px rgba(0, 0, 0, .1);
+	border-radius:    10px;
+	position:         relative;
+}
+
+.number {
+	font-weight: 700;
+	font-size:   72px;
+	line-height: 1.15;
+	display:     block;
+	color:       rgba(255, 223, 127, 0.7);
+}
+
+.description {
+	font-weight: 400;
+	font-size:   18px;
+	line-height: 1.22;
+	color:       $white;
+	max-width:   230px;
+	margin-top:  42px;
+
+	&Color {
+		&Green {
+			color:       $neon-green;
+			font-weight: 800;
+			font-size:   20px;
+		}
+	}
+}
+
+.icon {
+	width:    270px;
+	height:   127px;
+	position: absolute;
+	top:      -20px;
+	right:    30px;
+
+	&Type {
+		&Money {
+			background: url('../../../assets/images/benefits/money.webp');
+		}
+
+		&Counter {
+			background: url('../../../assets/images/benefits/benefits_2.webp');
+		}
+
+		&Car {
+			background: url('../../../assets/images/benefits/benefits_3.webp');
+		}
+
+		&Wallet {
+			background: url('../../../assets/images/benefits/benefits_4.webp');
+		}
+	}
+}

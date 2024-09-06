@@ -1,0 +1,97 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.header {
+	width:            100%;
+	background-color: $black;
+	padding:          14px 0 0;
+}
+
+.wrapper {
+	display:         flex;
+	justify-content: space-between;
+	align-items:     center;
+
+	@media screen and (max-width: 1200px) {
+		padding: 0 20px;
+	}
+
+	@include tablet {
+		padding: 0 20px;
+	}
+}
+
+.logo {
+	width:      168px;
+	height:     82px;
+	object-fit: cover;
+}
+
+.socials {
+	@include mobile {
+		display: none;
+	}
+}
+
+.menu {
+	margin-top: 15px;
+
+	@media screen and (max-width: 1100px) {
+		padding: 11px 20px;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.numberBox {
+	display:     flex;
+	align-items: center;
+	gap:         10px 20px;
+
+	@include tablet {
+		flex-flow: column;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.number {
+	font-weight: 600;
+	font-size:   24px;
+	line-height: 29px;
+	display:     block;
+	color:       $white;
+}
+
+.available {
+	display:     flex;
+	gap:         0 8px;
+	font-weight: 400;
+	font-size:   14px;
+	line-height: 17px;
+	color:       $white;
+	text-align:  center;
+
+	&:before {
+		content: url('../../../assets/images/header/online.svg');
+		width:   20px;
+		height:  20px;
+		display: block;
+	}
+}
+
+.burger {
+	content: url('../../../assets/images/header/burger.svg');
+	display: none;
+	width:   50px;
+	height:  24px;
+	cursor:  pointer;
+
+	@include mobile {
+		display: block;
+	}
+}

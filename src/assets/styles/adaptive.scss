@@ -1,0 +1,21 @@
+$end-tablet-point:   920px;
+$start-tablet-point: 721px;
+$end-phone-point:    720px;
+
+@mixin laptop {
+	@media screen and (max-width: 1200px) {
+		@content
+	}
+}
+
+@mixin tablet {
+	@media screen and (max-width: $end-tablet-point) {
+		@content
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $end-phone-point) {
+		@content
+	}
+}

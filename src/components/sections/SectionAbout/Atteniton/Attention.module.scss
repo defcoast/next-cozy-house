@@ -1,0 +1,64 @@
+@import '../../../../assets/styles/palette';
+
+.attention {
+	display:         flex;
+	align-items:     center;
+	justify-content: center;
+	flex-flow:       column;
+}
+
+.title {
+	font-weight:    700;
+	font-size:      42px;
+	line-height:    1.22;
+	letter-spacing: 1px;
+	color:          $white;
+	margin-top:     38px;
+	text-align:     center;
+}
+
+.text {
+	font-weight:    400;
+	font-size:      20px;
+	line-height:    1.22;
+	letter-spacing: 1px;
+	color:          $white;
+	margin-top:     20px;
+	width:          100%;
+	max-width:      980px;
+	text-align:     center;
+
+	&Align {
+		&Center {
+			text-align: center;
+		}
+	}
+
+	&Decoration {
+		&Underline {
+			text-decoration: underline;
+		}
+	}
+
+	&NoMargin {
+		margin: 0;
+	}
+}
+
+.socials {
+	margin-top: 30px;
+}
+
+.social {
+	font-size: 18px;
+	padding:   15px;
+}
+
+.number {
+	font-weight: 600;
+	font-size:   24px;
+	line-height: 29px;
+	display:     block;
+	color:       $white;
+	margin-top:  30px;
+}

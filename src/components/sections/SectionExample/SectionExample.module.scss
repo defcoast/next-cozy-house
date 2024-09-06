@@ -1,0 +1,39 @@
+@import '../../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
+
+.examples {
+	background-color: $primary;
+	padding:          110px 0 60px;
+}
+
+.title {
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+	color:       $white;
+
+	@include mobile {
+		font-size: 26px;
+	}
+}
+
+.images {
+	display:         flex;
+	flex-flow:       row wrap;
+	gap:             32px;
+	justify-content: space-between;
+	align-items:     center;
+	margin-top:      50px;
+
+	@include laptop {
+		justify-content: center;
+	}
+}
+
+.img {
+	max-width:     360px;
+	height:        360px;
+	width:         100%;
+	border-radius: 16px;
+	cursor:        pointer;
+}

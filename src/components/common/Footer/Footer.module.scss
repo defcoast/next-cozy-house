@@ -1,0 +1,110 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.footer {
+	width:            100%;
+	background-color: $platinum;
+	padding:          31px 20px 45px;
+}
+
+.logo {
+	width: unset;
+	height: unset;
+}
+
+.content {
+	display:               grid;
+	grid-template-columns: repeat(4, minmax(min-content, max-content));
+	align-items:           center;
+	justify-items:         center;
+	justify-content:       space-between;
+	max-width:             1170px;
+	margin:                0 auto;
+	gap:                   0 22px;
+
+	@include tablet {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, minmax(min-content, max-content));
+	}
+}
+
+.numberBox {
+	display:   flex;
+	flex-flow: column;
+
+	@include tablet {
+		margin-top: 20px;
+	}
+}
+
+.number {
+	font-weight: 600;
+	font-size:   18px;
+	line-height: 1.22;
+	color:       $black;
+}
+
+.available {
+	font-weight:    400;
+	font-size:      14px;
+	line-height:    1.21;
+	letter-spacing: 1px;
+	color:          $black;
+	margin-top:     9px;
+}
+
+.mail {
+	font-weight:          400;
+	font-size:            14px;
+	line-height:          1.21;
+	text-decoration-line: underline;
+	color:                $primary;
+	margin-top:           12px;
+
+}
+
+.nav {
+	@include tablet {
+		margin-top: 28px;
+	}
+}
+
+.list {
+	display:               grid;
+	grid-template-columns: 1fr 1fr;
+	gap:                   15px 20px;
+
+	@include tablet {
+		display:   flex;
+		flex-flow: column;
+	}
+}
+
+.link {
+	font-weight: 400;
+	font-size:   16px;
+	line-height: 1.18;
+	color:       $placeholder;
+}
+
+.socialsList {
+	@include tablet {
+		margin-top:      32px;
+		justify-content: center;
+	}
+}
+
+.socialsText {
+	display:        block;
+	margin-top:     13px;
+	font-weight:    400;
+	font-size:      14px;
+	line-height:    1.21;
+	letter-spacing: 1px;
+	color:          $placeholder;
+	max-width:      260px;
+
+	@include tablet {
+		text-align: center;
+	}
+}

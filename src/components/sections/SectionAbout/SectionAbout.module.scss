@@ -1,0 +1,95 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.about {
+	background-color: $black;
+	width:            100%;
+	padding:          110px 0 60px;
+}
+
+.title {
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+	color:       $primary;
+
+	@include laptop {
+		text-align: center;
+		margin:     0 auto;
+	}
+
+	@include mobile {
+		font-size: 26px;
+	}
+}
+
+.description {
+	font-weight:    400;
+	font-size:      18px;
+	line-height:    1.22;
+	letter-spacing: 1px;
+	color:          $white;
+	margin-top:     38px;
+	max-width:      600px;
+
+	@include laptop {
+		text-align: center;
+		margin:     38px auto 0;
+	}
+
+	@include mobile {
+		font-size: 16px;
+	}
+}
+
+.box {
+	display:    flex;
+	margin-top: 38px;
+	gap:        0 16px;
+
+	@include laptop {
+		flex-flow:       column;
+		justify-content: center;
+		align-items:     center;
+	}
+}
+
+.list {
+	display:   flex;
+	flex-flow: column;
+	gap:       24px 0;
+
+	@include laptop {
+		max-width: 720px;
+	}
+}
+
+.img {
+	width:         46%;
+	border-radius: 16px;
+	object-fit:    scale-down;
+
+	@include laptop {
+		width:         100%;
+		margin-bottom: 42px;
+	}
+}
+
+.item {
+	font-weight:    400;
+	font-size:      18px;
+	line-height:    22px;
+	letter-spacing: 1px;
+	color:          $white;
+
+	@include mobile {
+		font-size: 16px;
+	}
+
+	&:before {
+		content:      url('../../../assets/images/header/online.svg'); //todo Сделать другой поинт
+		margin-right: 15px;
+		position:     relative;
+		top:          4px;
+	}
+}

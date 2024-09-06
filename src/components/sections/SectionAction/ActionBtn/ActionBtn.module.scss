@@ -1,0 +1,31 @@
+@import '../../../../assets/styles/palette';
+
+.button {
+	background-color: $black;
+	color:            $white;
+	padding:          10px 20px;
+	border:           none;
+	border-radius:    5px;
+	cursor:           pointer;
+	box-shadow:       0 2px 4px rgba(0, 0, 0, 0.25);
+	font-size:        16px;
+
+	&:hover {
+		background-color: lighten($black, 20%); // увеличиваем яркость цвета при ховере
+	}
+
+	&:active {
+		background-color: lighten($black, 10%);
+	}
+
+	&:focus {
+		outline:    none;
+		box-shadow: 0 0 4px 2px $black;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor:  not-allowed;
+	}
+}
+

@@ -1,0 +1,152 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.steps {
+	width:            100%;
+	background-color: $primary;
+	padding:          110px 0 60px;
+}
+
+.title {
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+	color:       $black;
+	max-width:   716px;
+	width:       100%;
+
+	@include tablet {
+		text-align: center;
+	}
+
+	@include mobile {
+		font-size: 26px;
+	}
+}
+
+.list {
+	margin-top:      50px;
+	display:         flex;
+	justify-content: space-between;
+	gap:             30px;
+	flex-flow:       wrap;
+
+	@include tablet {
+		flex-flow:   column;
+		align-items: center;
+	}
+}
+
+.item {
+	position:  relative;
+	max-width: 270px;
+
+	&:after {
+		content:  url('../../../assets/images/steps/chevron_right.svg');
+		width:    16px;
+		height:   45px;
+		display:  block;
+		position: absolute;
+		right:    0;
+		top:      30px;
+
+		@include tablet {
+			content: '';
+		}
+	}
+
+	&:last-child {
+		&:after {
+			content: '';
+		}
+	}
+}
+
+.number {
+	font-weight: 700;
+	font-size:   72px;
+	line-height: 1.15;
+	text-align:  center;
+	color:       rgba(255, 223, 127, 0.7);
+	display:     block;
+	width:       100%;
+
+	&Icon {
+		&Car {
+			display:     flex;
+			gap:         0 8px;
+			align-items: center;
+
+			&:before {
+				content:         '';
+				display:         block;
+				width:           106px;
+				height:          106px;
+				background:      url('../../../assets/images/steps/step_1.svg');
+				background-size: 106px 106px;
+			}
+		}
+
+		&Contract {
+			display:     flex;
+			gap:         0 8px;
+			align-items: center;
+
+			&:before {
+				content:         '';
+				display:         block;
+				width:           106px;
+				height:          106px;
+				background:      url('../../../assets/images/steps/step_2.svg');
+				background-size: 106px 106px;
+			}
+		}
+
+		&Delivery {
+			display:     flex;
+			gap:         0 8px;
+			align-items: center;
+
+			&:before {
+				content:         '';
+				display:         block;
+				width:           106px;
+				height:          106px;
+				background:      url('../../../assets/images/steps/step_3.svg');
+				background-size: 106px 106px;
+			}
+		}
+
+		&Payment {
+			display:     flex;
+			gap:         0 8px;
+			align-items: center;
+
+			&:before {
+				content:         '';
+				display:         block;
+				width:           106px;
+				height:          106px;
+				background:      url('../../../assets/images/steps/step_4.svg');
+				background-size: 106px 106px;
+			}
+		}
+	}
+}
+
+.subtitle {
+	font-weight:    500;
+	font-size:      18px;
+	line-height:    1.22;
+	letter-spacing: 1px;
+	color:          $black;
+	margin-top:     10px;
+}
+
+.text {
+	font-weight: 400;
+	font-size:   16px;
+	line-height: 19px;
+	color:       $black;
+	margin-top:  11px;
+}

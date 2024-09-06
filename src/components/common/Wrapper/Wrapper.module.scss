@@ -1,0 +1,11 @@
+@import '../../../assets/styles/adaptive';
+
+.wrapper {
+	width:     100%;
+	max-width: 1170px;
+	margin:    0 auto;
+
+	@include laptop {
+		padding: 0 20px;
+	}
+}
