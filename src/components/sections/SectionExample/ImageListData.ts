@@ -19,7 +19,8 @@ export interface IExampleImagesData {
 export const exampleImages: IExampleImagesData[] = [
     {
         preview:  ImagePreview1,
-        original: '/images/ex-1.webp',
+        // original: '/images/ex-1.webp',
+        original: ImagePreview1,
     },
 
     {
