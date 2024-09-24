@@ -13,7 +13,7 @@ export const offerListData: IOfferListData[] = [
     {
         id: 2,
         icon: 'Price',
-        text: 'Цена от 299р за квадрат',
+        text: 'Фиксированная цена 1 200 ₽ за м²',
     },
     {
         id: 3,
