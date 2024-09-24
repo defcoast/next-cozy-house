@@ -128,6 +128,7 @@ const SectionOffer: FC = (): JSX.Element => {
                         src={ImageStation}
                         alt="Механизированная штукатурная станция"
                         className={styles.img}
+                        loading="eager"
                     />
                 </m.div>
             </div>
