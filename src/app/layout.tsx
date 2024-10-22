@@ -8,7 +8,7 @@ import {Metrika} from '@/components/Metrika';
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Уютный дом - механизированная штукатурка и стяжка во Владивостоке и Приморском крае",
+  title: "Уютный дом",
   description: "Компания Уютный дом это механизированная штукатурка стен и полусухая стяжка пола по самой выгодной цене от 299 рублей в городе Владивосток и по Приморскому краю",
   authors: {
     name: 'Rozhkov Alexander <rozhkov2222@icloud.com>',
