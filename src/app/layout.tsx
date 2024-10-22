@@ -9,7 +9,7 @@ const inter: NextFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Уютный дом",
-  description: "Компания Уютный дом это механизированная штукатурка стен и полусухая стяжка пола по самой выгодной цене от 299 рублей в городе Владивосток и по Приморскому краю",
+  description: "Механизированная штукатурка от 299 рублей за квадрат во Владивостоке и Приморскому краю",
   authors: {
     name: 'Rozhkov Alexander <rozhkov2222@icloud.com>',
   },
