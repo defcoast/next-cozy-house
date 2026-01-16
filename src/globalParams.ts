@@ -1,7 +1,7 @@
 /** Глобальные параметры сайта. */
 
 /** Номер телефона. */
-export const tel: string           = '+7 (924) 006 57-18';
+export const tel: string           = '+7 (964) 454 44-84';
 
 /** Ссылка на страницу в инстаграм. */
 export const instagramLink: string = 'https://www.instagram.com/rsk_uyutnyydom/';
