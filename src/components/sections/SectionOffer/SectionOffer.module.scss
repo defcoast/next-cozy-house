@@ -6,6 +6,33 @@
 	padding-top:      104px;
 	position:         relative;
 	overflow:         hidden;
+
+	@include tablet {
+		padding-top: 44px;
+	}
+}
+
+.number {
+	margin-top:      22px;
+	font-weight:     600;
+	font-size:       20px;
+	line-height:     24px;
+	color:           $primary;
+	display:         none;
+	align-items:     center;
+	gap:             0 5px;
+	justify-content: center;
+
+	@include mobile {
+		display: flex;
+	}
+
+	&:before {
+		content: url('../../../assets/images/header/phone.svg');
+		display: block;
+		width:   18px;
+		height:  18px;
+	}
 }
 
 .tagline {
@@ -197,4 +224,33 @@
 		height:     100%;
 		margin:     0 auto;
 	}
+}
+
+.imgPn {
+	position: relative;
+	top:      -56px;
+	left:     90px;
+
+	@include tablet {
+		max-width:  487px;
+		max-height: 489px;
+		top:        -84px;
+		left:       0;
+		width:      100%;
+		height:     100%;
+		margin:     0 auto;
+	}
+}
+
+.tgLink {
+	color:           #fff;
+	text-decoration: underline;
+	display:         inline-flex;
+	align-items:     center;
+	gap:             4px;
+}
+
+.tg {
+	position: relative;
+	top:      2px;
 }

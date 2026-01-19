@@ -1,6 +1,6 @@
 import {FC, JSX} from 'react';
-import imageLogo from '../../../assets/images/logo.svg'
-import imageFooterLogo from '../../../assets/images/footer-logo.png'
+import imageLogo from '@/assets/images/logo.png'
+import imageFooterLogo from '@/assets/images/footer-logo.webp'
 import classNames from 'classnames';
 import styles from './Logo.module.scss';
 import {LogoType} from '@/enums/LogoTypeEnum';

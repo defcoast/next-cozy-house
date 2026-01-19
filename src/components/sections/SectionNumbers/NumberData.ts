@@ -4,14 +4,14 @@ import {INumberData} from './INumberData';
 export const NumberData: INumberData[] = [
     {
         id:       1,
-        number:   6,
+        number:   8,
         title:    'Лет',
         subtitle: 'Стабильной работы',
     },
 
     {
         id:       2,
-        number:   100,
+        number:   250,
         title:    'м²',
         subtitle: 'Средняя производительность в день',
     },
