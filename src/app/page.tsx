@@ -2,7 +2,6 @@ import Header from '@/components/common/Header/Header';
 import SectionOffer from '@/components/sections/SectionOffer/SectionOffer';
 import SectionBenefits from '@/components/sections/SectionBenefits/SectionBenefits';
 import SectionAbout from '@/components/sections/SectionAbout/SectionAbout';
-import SectionEquipment from '@/components/sections/SectionEquipment/SectionEquipment';
 import SectionExample from '@/components/sections/SectionExample/SectionExample';
 import SectionAdditional from '@/components/sections/SectionAdditional/SectionAdditional';
 import SectionAction from '@/components/sections/SectionAction/SectionAction';
@@ -20,7 +19,7 @@ export default function Home() {
       <SectionBenefits />
       <SectionAbout />
       <SectionSteps />
-      <SectionEquipment />
+      {/*<SectionEquipment /> todo Блок про вл ру..*/}
       <SectionExample />
       <SectionNumbers />
       <SectionAdditional />

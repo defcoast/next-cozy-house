@@ -8,8 +8,8 @@ import {Metrika} from '@/components/Metrika';
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Уютный дом",
-  description: "Механизированная штукатурка от 299 рублей за квадрат во Владивостоке и Приморскому краю",
+  title: "Заказать механизированную (машинную) стяжку пола во Владивостоке по выгодным ценам",
+  description: "У нас Вы можете заказать механизированную (машинную) стяжку пола во Владивостоке по выгодным ценам. Цена за м2, плюсы и минусы по сравнению с ручной штукатуркой. Гарантия качества",
   authors: {
     name: 'Rozhkov Alexander <rozhkov2222@icloud.com>',
   },

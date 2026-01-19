@@ -16,7 +16,7 @@ const SectionBenefits: FC = (): JSX.Element => {
         <section className={styles.benefits} id="benefits">
             <Wrapper>
                 <AnimationTitle className={styles.title}>
-                    Механизированная штукатурка стен подходит для тех кто ценит
+                    Полусухая стяжка и механизированная штукатурка стен подходит для тех кто ценит
                     <PaintedText color={SiteColorsEnum.WHITE}>
                         качество, своё время и деньги
                     </PaintedText>

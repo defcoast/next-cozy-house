@@ -7,6 +7,9 @@ import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
 import SocialBox from '../SocialBox/SocialBox';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
+import {telegramLink} from '@/globalParams';
+import Image from 'next/image';
+import IconTelegram from '@/assets/images/socials/telegram.webp';
 
 /** Блок "Предупреждение". */
 const Attention: FC = (): JSX.Element => {
@@ -36,8 +39,34 @@ const Attention: FC = (): JSX.Element => {
                 <PaintedText color={SiteColorsEnum.PRIMARY}>
                     <b>Для экономии бюджета необходимо правильно распределить этапы работ.</b> <br />
                 </PaintedText>
-                <b>ПРИ НАЧАЛЕ РЕМОНТА, ШТУКАТУРНЫЕ РАБОТЫ ПРОИЗВОДЯТСЯ СРАЗУ ПОСЛЕ ВОВЕДЕНИЯ СТЕН, ТОГДА ФИНАНСОВЫЕ ЗАТРАТЫ БУДУТ НА 15% МЕНЬШЕ</b>
+                <b>ПРИ НАЧАЛЕ РЕМОНТА, ШТУКАТУРНЫЕ РАБОТЫ ПРОИЗВОДЯТСЯ СРАЗУ ПОСЛЕ ВОЗВЕДЕНИЯ СТЕН, СТЯЖКА ПОЛА - СРАЗУ ПОСЛЕ ШТУКАТУРКИ, ТОЛЬКО ПОТОМ ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ, ТОГДА ФИНАНСОВЫЕ ЗАТРАТЫ БУДУТ НА 15% МЕНЬШЕ</b>
             </p>
+
+	        <p className={styles.text}>
+		        <PaintedText className={styles.tgParagraph} color={SiteColorsEnum.PRIMARY}>
+			        ПОДРОБНЕЕ В НАШЕМ КАНАЛЕ &nbsp;
+
+			        <a
+			        className={styles.tgLink}
+			        href={telegramLink}
+			        target="_blank"
+			        >
+				        <PaintedText
+				        color={SiteColorsEnum.WHITE}
+				        >
+					        TELEGRAM
+				        </PaintedText>
+				        <Image
+				        src={IconTelegram}
+				        alt="Перейти в телеграм"
+				        width={20}
+				        height={20}
+				        className={styles.tg}
+				        />
+			        </a>
+		        </PaintedText>
+	        </p>
+
             <a
             href="#action__form"
             className={classNames(styles.text, styles.textAlignCenter, styles.textDecorationUnderline)}

@@ -2,17 +2,21 @@
 
 import {FC, JSX } from 'react';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
-import {tel, whatsAppLink} from '@/globalParams';
+import {tel, telegramLink, whatsAppLink} from '@/globalParams';
 import {domAnimation, LazyMotion, m} from 'framer-motion';
 import Wrapper from '../../common/Wrapper/Wrapper';
 import PaintedText from '../../common/PaintedText/PaintedText';
 import classNames from 'classnames';
 import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
 import styles from './SectionOffer.module.scss';
-import ImageStation from '../../../assets/images/offer/station_1.webp';
 import {useInView} from 'react-intersection-observer';
 import {IOfferListData, offerListData} from './OfferListData';
 import Image from 'next/image';
+
+import IconTelegram from '../../../assets/images/socials/telegram.webp';
+import ImageStationPn from '../../../assets/images/offer/pn.png';
+import Tel from '@/components/common/Tel/Tel';
+
 
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {
@@ -28,11 +32,11 @@ const SectionOffer: FC = (): JSX.Element => {
     /** Хук наблюдателя пересечений изображения описания. */
     const [refDescription, inViewDescription] = useInView({triggerOnce: true});
 
-    /** Анимация изображения. */
-    const animationImage = {
-        visible: {opacity: 1, x: 0, transition: {duration: 0.6}},
-        hidden: {opacity: 0, x: 200, transition: {duration: 0.6}},
-    };
+	/** Анимация изображения. */
+	const animationImagePn = {
+		visible: {opacity: 1, x: 0, transition: {duration: 0.6}},
+		hidden: {opacity: 0, x: 250, transition: {duration: 0.6}},
+	};
 
     /** Анимация списка. */
     const animationList = {
@@ -49,11 +53,13 @@ const SectionOffer: FC = (): JSX.Element => {
     /** Анимация описания. */
     const animationDescription = {
         visible: {x: 0, opacity: 1, transition: {duration: .5}},
-        hidden: {x: -600, opacity: 0, transition: {duration: 0.6}},
+        hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
     }
 
     return (
     <section className={styles.offer}>
+	    {/** Номер телефона. */}
+	    <Tel className={styles.number} />
         <LazyMotion features={domAnimation}>
             <Wrapper>
                 <div className={styles.tagline}>
@@ -69,7 +75,7 @@ const SectionOffer: FC = (): JSX.Element => {
                 animate={inViewTitle ? 'visible' : 'hidden'}
                 variants={animationTitle}
                 >
-                    Механизированная штукатурка стен
+                    Полусухая стяжка пола и механизированная штукатурка стен
                 </m.h1>
 
                 <m.p
@@ -79,10 +85,27 @@ const SectionOffer: FC = (): JSX.Element => {
                 animate={inViewDescription ? 'visible' : 'hidden'}
                 variants={animationDescription}
                 >
-                    При заказе механизированной штукатурки у нас —
-                    Вы получаете материал
+                    Вся самая актуальная и полезная информация<br />
                     <PaintedText color={SiteColorsEnum.PRIMARY}>
-                        по оптовой цене
+	                    в нашем канале
+	                    <a
+	                    className={styles.tgLink}
+	                    href={telegramLink}
+	                    target="_blank"
+	                    >
+		                    <PaintedText
+		                    color={SiteColorsEnum.WHITE}
+		                    >
+			                    Telegram
+							</PaintedText>
+		                    <Image
+		                    src={IconTelegram}
+		                    alt="Перейти в телеграм"
+		                    width={20}
+		                    height={20}
+		                    className={styles.tg}
+		                    />
+						</a>
                     </PaintedText>
                 </m.p>
 
@@ -118,19 +141,19 @@ const SectionOffer: FC = (): JSX.Element => {
                 </div>
             </Wrapper>
             <div className={styles.stationBox}>
-                <m.div
-                    ref={refStation}
-                    initial="hidden"
-                    animate={inViewStation ? 'visible' : 'hidden'}
-                    variants={animationImage}
-                >
-                    <Image
-                        src={ImageStation}
-                        alt="Механизированная штукатурная станция"
-                        className={styles.img}
-                        loading="eager"
-                    />
-                </m.div>
+	            <m.div
+	            ref={refStation}
+	            initial="hidden"
+	            animate={inViewStation ? 'visible' : 'hidden'}
+	            variants={animationImagePn}
+	            >
+		            <Image
+		            src={ImageStationPn}
+		            alt="Пневмонагнетатель"
+		            className={styles.imgPn}
+		            loading="eager"
+		            />
+	            </m.div>
             </div>
 
             <div className={styles.bottomEffect}/>
