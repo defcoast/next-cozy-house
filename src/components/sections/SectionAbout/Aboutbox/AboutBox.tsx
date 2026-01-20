@@ -23,7 +23,7 @@ const AboutBox: FC = (): JSX.Element => {
 	/** Анимация контейнера. */
 	const animationBoxPn = {
 		visible: {opacity: 1, x: 0, transition: {duration: 0.6}},
-		hidden: {opacity: 0, x: 200, transition: {duration: 0.6}},
+		hidden: {opacity: 0, x: -200, transition: {duration: 0.6}},
 	};
 
     return (

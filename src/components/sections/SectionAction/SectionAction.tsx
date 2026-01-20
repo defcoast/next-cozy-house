@@ -55,7 +55,7 @@ const SectionAction: FC = () => {
                 <div id="form-box">
                     <div className={styles.infoBox}>
                         <p className={styles.info}>
-                            При заказе механизированной штукатурки стен у нас — Вы получаете материалы по оптовой цене.
+                            При заказе полусухой стяжки и механизированной штукатурки стен у нас — Вы получаете материалы по оптовой цене.
                         </p>
                         <span className={styles.img}/>
                     </div>

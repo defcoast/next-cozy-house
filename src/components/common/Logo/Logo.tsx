@@ -6,8 +6,6 @@ import styles from './Logo.module.scss';
 import {LogoType} from '@/enums/LogoTypeEnum';
 import Image from 'next/image';
 
-
-
 /** Интерфейс пропсов компонента. */
 interface IProps {
     /** Класс корневого блока. */
