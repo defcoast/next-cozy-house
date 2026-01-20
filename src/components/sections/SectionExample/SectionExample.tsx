@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import {FC, JSX} from 'react';
 import styles from './SectionExample.module.scss';
@@ -7,36 +7,60 @@ import AnimationTitle from '../../common/AnimationTitle/AnimationTitle';
 import PaintedText from '../../common/PaintedText/PaintedText';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
 import 'react-photo-view/dist/react-photo-view.css';
-import {PhotoProvider, PhotoView} from 'react-photo-view';
-import {exampleImages, IExampleImagesData} from './ImageListData';
-import Image from 'next/image';
+import EmblaCarousel from '@/components/sections/SectionExample/EmblaCarousel/EmblaCarousel';
+import {EmblaOptionsType} from 'embla-carousel';
+
+/** Интерфейс изображения-слайда. */
+interface Slide {
+	/** Идентификатор слайда. */
+	id: string,
+
+	/** Путь к изображению. */
+	src: string,
+
+	/** Альтернативный текст. */
+	alt: string,
+
+	/** Приоритет слайда. */
+	priority?: boolean
+}
 
 /** Секция "Примеры наших работ". */
 const SectionExample: FC = (): JSX.Element => {
-    return (
-    <section className={styles.examples}>
-        <Wrapper>
-            <AnimationTitle className={styles.title}>
-                <PaintedText color={SiteColorsEnum.BLACK}>Примеры</PaintedText>
-                наших работ
-            </AnimationTitle>
+	const OPTIONS: EmblaOptionsType = { align: 'start', loop: true }
+	const SLIDES: Slide[] = [
+		{id: '1', src: '/images/ex-01.webp', alt: 'Полусухая стяжка', priority: true},
+		{id: '2', src: '/images/ex-02.webp', alt: 'Полусухая стяжка', priority: true},
+		{id: '3', src: '/images/ex-03.webp', alt: 'Полусухая стяжка', priority: true},
+		{id: '4', src: '/images/ex-04.webp', alt: 'Полусухая стяжка', priority: true},
+		{id: '5', src: '/images/ex-05.webp', alt: 'Полусухая стяжка'},
+		{id: '6', src: '/images/ex-06.webp', alt: 'Полусухая стяжка'},
 
-            <PhotoProvider>
-                <div className={styles.images}>
-                    {exampleImages.map((item: IExampleImagesData, index: number) => (
-                    <PhotoView key={index} src={String(item?.original)}>
-                        <Image
-                            src={item.preview}
-                            alt={`Изображение наших работ ${index + 1}`}
-                            className={styles.img}
-                        />
-                    </PhotoView>
-                    ))}
-                </div>
-            </PhotoProvider>
-        </Wrapper>
-    </section>
-    );
+		{id: '7', src: '/images/ex-1.webp', alt: 'Механизированная штукатурка'},
+		{id: '8', src: '/images/ex-2.webp', alt: 'Механизированная штукатурка'},
+		{id: '9', src: '/images/ex-3.webp', alt: 'Механизированная штукатурка'},
+		{id: '10', src: '/images/ex-4.webp', alt: 'Механизированная штукатурка'},
+		{id: '11', src: '/images/ex-5.webp', alt: 'Механизированная штукатурка'},
+		{id: '12', src: '/images/ex-6.webp', alt: 'Механизированная штукатурка'},
+	]
+
+	return (
+	<section className={styles.examples}>
+		<Wrapper>
+			<AnimationTitle className={styles.title}>
+				<PaintedText color={SiteColorsEnum.BLACK}>Примеры</PaintedText>
+				наших работ
+			</AnimationTitle>
+
+			<div className={styles.images}>
+				<EmblaCarousel
+				slides={SLIDES}
+				options={OPTIONS}
+				/>
+			</div>
+		</Wrapper>
+	</section>
+	);
 };
 
 export default SectionExample;

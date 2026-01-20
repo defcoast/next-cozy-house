@@ -18,12 +18,7 @@
 }
 
 .images {
-	display:         flex;
-	flex-flow:       row wrap;
-	gap:             32px;
-	justify-content: space-between;
-	align-items:     center;
-	margin-top:      50px;
+	margin-top: 50px;
 
 	@include laptop {
 		justify-content: center;
@@ -37,3 +32,17 @@
 	border-radius: 16px;
 	cursor:        pointer;
 }
+
+.embla {
+	overflow: hidden;
+}
+
+.emblaContainer {
+	display: flex;
+}
+
+.emblaSlide {
+	flex:      0 0 100%;
+	min-width: 0;
+}
+

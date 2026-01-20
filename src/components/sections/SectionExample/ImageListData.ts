@@ -15,8 +15,37 @@ export interface IExampleImagesData {
     original: string | StaticImageData,
 }
 
-/** Список изображений. */
+/** @deprecated Список изображений. */
 export const exampleImages: IExampleImagesData[] = [
+    {
+        preview:  ImagePreview1,
+        original: '/images/ex-01.webp',
+    },
+
+    {
+        preview:  ImagePreview2,
+        original: '/images/ex-02.webp',
+    },
+
+    {
+        preview:  ImagePreview3,
+        original: '/images/ex-03.webp',
+    },
+
+    {
+        preview:  ImagePreview4,
+        original: '/images/ex-04.webp',
+    },
+
+    {
+        preview:  ImagePreview5,
+        original: '/images/ex-05.webp',
+    },
+
+    {
+        preview:  ImagePreview6,
+        original: '/images/ex-06.webp',
+    },
     {
         preview:  ImagePreview1,
         original: '/images/ex-1.webp',

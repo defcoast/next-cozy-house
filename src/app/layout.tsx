@@ -21,10 +21,13 @@ export const metadata: Metadata = {
     'смесь',
     'оштукатуривание',
   ],
+  appleWebApp: {
+    title: 'Уютный дом',
+  },
   verification: {
     google: 'NhgbeLlP2hTTlrXSEmeIOK7j3LlWvytkwkpbs8vQmjg',
     yandex: 'd1408a2b8a5e1c7c',
-  }
+  },
 };
 
 export const viewport: Viewport = {
