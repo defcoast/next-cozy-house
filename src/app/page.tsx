@@ -8,6 +8,7 @@ import SectionAction from '@/components/sections/SectionAction/SectionAction';
 import SectionSteps from '@/components/sections/SectionSteps/SectionSteps';
 import SectionNumbers from '@/components/sections/SectionNumbers/SectionNumbers';
 import Footer from '@/components/common/Footer/Footer';
+import SectionReviews from '@/components/sections/SectionReviews/SectionReviews';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <SectionBenefits />
       <SectionAbout />
       <SectionSteps />
-      {/*<SectionEquipment /> todo Блок про вл ру..*/}
+      <SectionReviews />
       <SectionExample />
       <SectionNumbers />
       <SectionAdditional />

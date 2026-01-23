@@ -47,8 +47,8 @@ const Footer: FC = (): JSX.Element => {
                         </a>
                     </li>
                     <li>
-                        <a href="#equipment" className={styles.link}>
-                            Обзор
+                        <a href="#reviews" className={styles.link}>
+                            Отзывы
                         </a>
                     </li>
                     <li>
