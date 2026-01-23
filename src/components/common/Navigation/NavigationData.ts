@@ -21,8 +21,8 @@ export const navigationData: INavigationData[] = [
 
     {
         id:     4,
-        anchor: 'equipment',
-        text:   'Обзор'
+        anchor: 'reviews',
+        text:   'Отзывы'
     },
 
     {
