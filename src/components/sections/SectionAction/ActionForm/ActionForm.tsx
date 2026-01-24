@@ -9,7 +9,7 @@ const ActionForm: FC = (): JSX.Element => {
     const TOKEN: string   = '5812409585:AAEC2fidiPcKWhKj806clKbesDvpAUm9zmg';
 
     /** Идентификатор чата. */
-    const CHAT_ID: string = '-654377820';
+    const CHAT_ID: string = '-1003317073401';
 
     /** Endpoint для отправки сообщения. */
     const URI_API: string = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
