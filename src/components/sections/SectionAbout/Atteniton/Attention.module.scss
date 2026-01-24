@@ -1,4 +1,5 @@
 @import '../../../../assets/styles/palette';
+@import '../../../../assets/styles/adaptive';
 
 .attention {
 	display:         flex;
@@ -54,6 +55,22 @@
 
 	&NoMargin {
 		margin: 0;
+	}
+}
+
+.mobileTgText {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}
+
+.tgText {
+	display: block;
+
+	@include tablet {
+		display: none;
 	}
 }
 

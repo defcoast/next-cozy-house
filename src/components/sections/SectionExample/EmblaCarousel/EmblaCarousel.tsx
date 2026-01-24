@@ -7,6 +7,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import {PhotoProvider, PhotoView} from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
+import {useInView} from 'react-intersection-observer'
 
 import {DotButton, useDotButton} from './EmblaCarouselDotButton'
 import {PrevButton, NextButton, usePrevNextButtons} from './EmblaCarouselArrowButtons'
@@ -44,6 +45,29 @@ const EmblaCarousel: React.FC<PropType> = ({slides, options}) => {
 	[autoplay.current]
 	)
 
+	const {ref: inViewRef, inView} = useInView({
+		threshold: 0.2,
+	});
+
+	const setRefs = useCallback(
+	(node: HTMLDivElement | null) => {
+		emblaRef(node);
+		inViewRef(node);
+	},
+	[emblaRef, inViewRef]
+	);
+
+	React.useEffect(() => {
+		const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+		if (!autoplayPlugin) return;
+
+		if (inView) {
+			autoplayPlugin.play();
+		} else {
+			autoplayPlugin.stop();
+		}
+	}, [inView, emblaApi]);
+
 	const onNavButtonClick = useCallback((api: EmblaCarouselType) => {
 		const ap = api?.plugins()?.autoplay
 		if (!ap) return
@@ -63,7 +87,7 @@ const EmblaCarousel: React.FC<PropType> = ({slides, options}) => {
 	return (
 	<section className="embla">
 		<PhotoProvider>
-			<div className="embla__viewport" ref={emblaRef}>
+			<div className="embla__viewport" ref={setRefs}>
 				<div className="embla__container">
 					{slides.map((slide, index) => (
 					<div className="embla__slide" key={slide.id}>

@@ -21,7 +21,7 @@ import Tel from '@/components/common/Tel/Tel';
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {
     /** Хук наблюдателя пересечений изображения станции. */
-    const [refStation, inViewStation] = useInView({triggerOnce: true});
+    const [refStation, inViewStation] = useInView({triggerOnce: true, rootMargin: '-20% 0px -20% 0px'});
 
     /** Хук наблюдателя пересечений списка. */
     const [refList, inViewList] = useInView({triggerOnce: true});
@@ -30,6 +30,7 @@ const SectionOffer: FC = (): JSX.Element => {
     const [refTitle, inViewTitle] = useInView({triggerOnce: true});
 
     /** Хук наблюдателя пересечений изображения описания. */
+    const [refDescriptionMobile, inViewDescriptionMobile] = useInView({triggerOnce: true});
     const [refDescription, inViewDescription] = useInView({triggerOnce: true});
 
 	/** Анимация изображения. */
@@ -56,7 +57,13 @@ const SectionOffer: FC = (): JSX.Element => {
         hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
     }
 
-    return (
+	const animationDescriptionMobile = {
+		visible: {x: 0, opacity: 1, transition: {duration: .5}},
+		hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
+	}
+
+
+	return (
     <section className={styles.offer}>
 	    {/** Номер телефона. */}
 	    <Tel className={styles.number} />
@@ -79,35 +86,68 @@ const SectionOffer: FC = (): JSX.Element => {
                 </m.h1>
 
                 <m.p
-                className={styles.description}
-                ref={refDescription}
+                className={classNames(styles.description, styles.mobileDescription)}
+                ref={refDescriptionMobile}
                 initial="hidden"
-                animate={inViewDescription ? 'visible' : 'hidden'}
-                variants={animationDescription}
+                animate={inViewDescriptionMobile ? 'visible' : 'hidden'}
+                variants={animationDescriptionMobile}
                 >
                     Вся самая актуальная и полезная информация<br />
                     <PaintedText color={SiteColorsEnum.PRIMARY}>
-	                    в нашем канале
-	                    <a
-	                    className={styles.tgLink}
-	                    href={telegramLink}
-	                    target="_blank"
-	                    >
-		                    <PaintedText
-		                    color={SiteColorsEnum.WHITE}
-		                    >
-			                    Telegram
-							</PaintedText>
-		                    <Image
-		                    src={IconTelegram}
-		                    alt="Перейти в телеграм"
-		                    width={20}
-		                    height={20}
-		                    className={styles.tg}
-		                    />
-						</a>
+	                    в нашем канале <br />
                     </PaintedText>
+	                <PaintedText color={SiteColorsEnum.PRIMARY}>жми 👉</PaintedText>
+	                <a
+	                className={styles.tgLink}
+	                href={telegramLink}
+	                target="_blank"
+	                >
+		                <PaintedText
+		                color={SiteColorsEnum.WHITE}
+		                >
+			                Telegram
+		                </PaintedText>
+		                <Image
+		                src={IconTelegram}
+		                alt="Перейти в телеграм"
+		                width={20}
+		                height={20}
+		                className={styles.tg}
+		                />
+	                </a>
                 </m.p>
+
+	            <m.p
+	            className={styles.description}
+	            ref={refDescription}
+	            initial="hidden"
+	            animate={inViewDescription ? 'visible' : 'hidden'}
+	            variants={animationDescription}
+	            >
+		            Вся самая актуальная и полезная информация<br />
+		            <PaintedText color={SiteColorsEnum.PRIMARY}>
+			            в нашем канале
+		            </PaintedText>
+		            <a
+		            className={styles.tgLink}
+		            href={telegramLink}
+		            target="_blank"
+		            >
+			            <PaintedText
+			            color={SiteColorsEnum.WHITE}
+			            >
+				            Telegram
+			            </PaintedText>
+			            <Image
+			            src={IconTelegram}
+			            alt="Перейти в телеграм"
+			            width={20}
+			            height={20}
+			            className={styles.tg}
+			            />
+		            </a>
+		            <PaintedText color={SiteColorsEnum.PRIMARY}>&nbsp;👈 жми</PaintedText>
+	            </m.p>
 
                 <ul className={styles.list}>
                     {offerListData.map((item: IOfferListData) => (

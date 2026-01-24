@@ -47,7 +47,10 @@ const SectionAction: FC = () => {
                         src={ImageBrigade}
                         alt="Бригада специалистов"
                         className={styles.imgBrigade}
-                        layout="responsive"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 676px"
+                        loading="lazy"
+                        fetchPriority="low"
                         />
                     </m.div>
                 </LazyMotion>

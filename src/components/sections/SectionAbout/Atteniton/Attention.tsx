@@ -39,10 +39,36 @@ const Attention: FC = (): JSX.Element => {
                 <PaintedText color={SiteColorsEnum.PRIMARY}>
                     <b>Для экономии бюджета необходимо правильно распределить этапы работ.</b> <br />
                 </PaintedText>
-                <b>ПРИ НАЧАЛЕ РЕМОНТА, ШТУКАТУРНЫЕ РАБОТЫ ПРОИЗВОДЯТСЯ СРАЗУ ПОСЛЕ ВОЗВЕДЕНИЯ СТЕН, СТЯЖКА ПОЛА - СРАЗУ ПОСЛЕ ШТУКАТУРКИ, ТОЛЬКО ПОТОМ ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ, ТОГДА ФИНАНСОВЫЕ ЗАТРАТЫ БУДУТ НА 15% МЕНЬШЕ</b>
+	            <br />
+                <b>ЭЛЕКТРОМОНТАЖНЫЕ И САНТЕХНИЧЕСКИЕ РАБОТЫ В ОБЯЗАТЕЛЬНОМ ПОРЯДКЕ ПРОВОДЯТСЯ ТОЛЬКО ПОСЛЕ ВЫРАВНИВАНИЯ СТЕН И ПОЛОВ ТОГДА ФИНАНСОВЫЕ ЗАТРАТЫ БУДУТ НА 15 % МЕНЬШЕ</b>
             </p>
 
-	        <p className={styles.text}>
+	        <p className={classNames(styles.text, styles.mobileTgText)}>
+		        <PaintedText className={styles.tgParagraph} color={SiteColorsEnum.PRIMARY}>
+			        ПОДРОБНЕЕ В НАШЕМ КАНАЛЕ <br />
+			        <PaintedText color={SiteColorsEnum.PRIMARY}>Жми 👉</PaintedText>
+			        <a
+			        className={styles.tgLink}
+			        href={telegramLink}
+			        target="_blank"
+			        >
+				        <PaintedText
+				        color={SiteColorsEnum.WHITE}
+				        >
+					        TELEGRAM
+				        </PaintedText>
+				        <Image
+				        src={IconTelegram}
+				        alt="Перейти в телеграм"
+				        width={20}
+				        height={20}
+				        className={styles.tg}
+				        />
+			        </a>
+		        </PaintedText>
+	        </p>
+
+	        <p className={classNames(styles.text, styles.tgText)}>
 		        <PaintedText className={styles.tgParagraph} color={SiteColorsEnum.PRIMARY}>
 			        ПОДРОБНЕЕ В НАШЕМ КАНАЛЕ &nbsp;
 
@@ -65,6 +91,8 @@ const Attention: FC = (): JSX.Element => {
 				        />
 			        </a>
 		        </PaintedText>
+		        &nbsp;👈
+		        <PaintedText color={SiteColorsEnum.PRIMARY}>Жми</PaintedText>
 	        </p>
 
             <a
