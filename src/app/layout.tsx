@@ -55,7 +55,6 @@ export default function RootLayout({
   return (
     <html lang="ru">
     <body className={classNames(inter.variable, russoOne.variable, inter.className)}>
-    {children}
         {children}
 
         <Suspense>
