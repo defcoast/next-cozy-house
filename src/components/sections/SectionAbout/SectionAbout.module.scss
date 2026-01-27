@@ -105,6 +105,10 @@
 	position:     relative;
 	width:        100%;
 	aspect-ratio: 16 / 9;
-	flex-shrink: 0;
-	max-width: 538px;
+	flex-shrink:  0;
+	max-width:    538px;
+
+	@include laptop {
+		max-width: unset;
+	}
 }

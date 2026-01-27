@@ -25,7 +25,7 @@ export const NumberData: INumberData[] = [
 
     {
         id:       4,
-        number:   7,
+        number:   5,
         title:    null,
         subtitle: 'Штукатурных станций',
     },

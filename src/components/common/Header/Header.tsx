@@ -44,11 +44,17 @@ const Header: FC = (): JSX.Element => {
                     </span>
                 </div>
 
-                {/** Мобильное меню (триггер). */}
-                <span
-                className={styles.burger}
-                onClick={handleBurgerMenuClick}
-                />
+                <div className={styles.mobileNumberBox}>
+                    <Tel className={styles.mobileNumber} />
+
+                    {/** Мобильное меню (триггер). */}
+                    <span
+                    className={styles.burger}
+                    onClick={handleBurgerMenuClick}
+                    />
+                </div>
+
+
             </Wrapper>
 
             {/** Меню сайта. */}

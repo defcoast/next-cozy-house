@@ -1,11 +1,20 @@
 import type {Metadata, Viewport} from 'next';
-import { Inter } from "next/font/google";
+import { Inter, Russo_One } from "next/font/google";
 import "./globals.css";
 import React, {Suspense} from 'react';
-import {NextFont} from 'next/dist/compiled/@next/font';
 import {Metrika} from '@/components/Metrika';
+import classNames from 'classnames';
 
-const inter: NextFont = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['cyrillic'],
+  variable: '--font-inter',
+});
+
+const russoOne = Russo_One({
+  weight: '400',
+  subsets: ['cyrillic'],
+  variable: '--font-russo',
+});
 
 export const metadata: Metadata = {
   title: "Заказать механизированную (машинную) стяжку пола во Владивостоке по выгодным ценам",
@@ -45,7 +54,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={inter.className}>
+    <body className={classNames(inter.variable, russoOne.variable, inter.className)}>
+    {children}
         {children}
 
         <Suspense>

@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import {FC, JSX } from 'react';
+import {FC, JSX} from 'react';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
-import {tel, telegramLink, whatsAppLink} from '@/globalParams';
+import {tel, telegramLink} from '@/globalParams';
 import {domAnimation, LazyMotion, m} from 'framer-motion';
 import Wrapper from '../../common/Wrapper/Wrapper';
 import PaintedText from '../../common/PaintedText/PaintedText';
@@ -15,8 +15,6 @@ import Image from 'next/image';
 
 import IconTelegram from '../../../assets/images/socials/telegram.webp';
 import ImageStationPn from '../../../assets/images/offer/pn.png';
-import Tel from '@/components/common/Tel/Tel';
-
 
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {
@@ -47,9 +45,16 @@ const SectionOffer: FC = (): JSX.Element => {
 
     /** Анимация заголовка. */
     const animationTitle = {
-        visible: {scale: 1, x: 0, transition: {duration: .5}},
-        hidden: {scale: 0.1, x: -100, transition: {duration: 0.6}},
-    }
+	    hidden: {opacity: 0, y: 12},
+	    visible: {
+		    opacity: 1,
+		    y: 0,
+		    transition: {
+			    duration: 0.5,
+			    ease: 'easeOut',
+		    },
+	    },
+    };
 
     /** Анимация описания. */
     const animationDescription = {
@@ -62,11 +67,16 @@ const SectionOffer: FC = (): JSX.Element => {
 		hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
 	}
 
+	const handleAnchor = (id: string): void => {
+		const el = document.getElementById(id);
+		if (null === el) { return; }
+
+		el.scrollIntoView({behavior: 'smooth', block: 'start'});
+	};
+
 
 	return (
     <section className={styles.offer}>
-	    {/** Номер телефона. */}
-	    <Tel className={styles.number} />
         <LazyMotion features={domAnimation}>
             <Wrapper>
                 <div className={styles.tagline}>
@@ -169,8 +179,7 @@ const SectionOffer: FC = (): JSX.Element => {
 
                 <div className={styles.buttons}>
                     <PrimaryBtn
-                    href={whatsAppLink + '?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%8F%20%D1%85%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82.'}
-                    target="_blank"
+                    onClick={() => handleAnchor('action__form')}
                     >
                         Рассчитать стоимость работ
                     </PrimaryBtn>

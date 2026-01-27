@@ -1,4 +1,4 @@
-import {FC, JSX, ReactNode} from 'react';
+import {FC, JSX, ReactNode, MouseEvent} from 'react';
 import styles from './PrimaryBtn.module.scss';
 import classNames from 'classnames';
 
@@ -15,6 +15,9 @@ interface IProps {
 
     /** Таргет. */
     target?:     string;
+
+    /** Функция клика. */
+    onClick?: () => void;
 }
 
 /** Основная кнопка. */
@@ -24,13 +27,19 @@ const PrimaryBtn: FC<IProps> = (
     children,
     className,
     target,
+    onClick,
 }): JSX.Element => {
+    const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+        onClick?.();
+    }
     return (
         <a
         href={href}
         className={classNames(styles.btn, className)}
         target={target ? target : '_self'}
         rel="noreferrer"
+        onClick={handleClick}
         >
             {children}
         </a>
