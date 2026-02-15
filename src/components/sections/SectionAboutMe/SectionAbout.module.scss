@@ -1,0 +1,177 @@
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+
+.section {
+	padding:          120px 0 80px;
+	background-color: $primary;
+	color:            white;
+	overflow:         hidden;
+	position:         relative;
+
+	// Subtle radial glow for depth
+	&::before {
+		content:          '';
+		position:         absolute;
+		inset:            0;
+		background-image: radial-gradient(
+			                  circle at 20% 50%,
+			                  rgba(white, 0.06) 0%,
+			                  transparent 50%
+		                  );
+		pointer-events:   none;
+	}
+
+	@include tablet {
+		padding: 90px 0 60px;
+	}
+
+	@include mobile {
+		padding: 60px 0 40px;
+	}
+}
+
+/* ── Title ────────────────────────────────────────── */
+
+.title {
+	font-size:      clamp(32px, 5vw, 52px);
+	font-weight:    800;
+	line-height:    1.15;
+	margin-bottom:  56px;
+	letter-spacing: -0.02em;
+	position:       relative;
+
+	@include tablet {
+		margin-bottom: 40px;
+	}
+
+	@include mobile {
+		margin-bottom: 32px;
+	}
+}
+
+/* ── Content area with float layout ───────────────── */
+
+.content {
+	display: block;
+	color: black;
+
+	// Clearfix for float
+	&::after {
+		content: '';
+		display: table;
+		clear:   both;
+	}
+}
+
+/* ── Image ────────────────────────────────────────── */
+
+.img {
+	float:         left;
+	width:         380px;
+	height:        460px;
+	object-fit:    cover;
+	border-radius: 20px;
+	margin-right:  36px;
+	margin-bottom: 20px;
+	box-shadow:    0 20px 60px rgba(black, 0.2),
+	               0 4px 16px rgba(black, 0.1);
+	border:        3px solid rgba(white, 0.15);
+	transition:    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	               box-shadow 0.4s ease;
+
+	&:hover {
+		transform:  translateY(-4px) scale(1.01);
+		box-shadow: 0 28px 70px rgba(black, 0.25),
+		            0 8px 24px rgba(black, 0.12);
+	}
+
+	@include tablet {
+		width:         280px;
+		height:        360px;
+		margin-right:  28px;
+		border-radius: 16px;
+	}
+
+	// On mobile — full width, no float
+	@include mobile {
+		float:         none;
+		display:       block;
+		width:         100%;
+		max-width:     420px;
+		height:        300px;
+		margin:        0 auto 28px;
+		border-radius: 16px;
+	}
+}
+
+/* ── Paragraphs ───────────────────────────────────── */
+
+.paragraph {
+	margin-bottom: 18px;
+	line-height:   1.2;
+	font-size:     24px;
+
+	@include tablet {
+		font-size: 20px;
+	}
+
+	@include mobile {
+		font-size:     15px;
+		line-height:   1.65;
+		margin-bottom: 17px;
+	}
+}
+
+// Bold label styling
+b.paragraph {
+	display:        inline-block;
+	font-size:      22px;
+	font-weight:    700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	padding-bottom: 4px;
+	border-bottom:  2px solid rgba(white, 0.35);
+	margin-bottom:  18px;
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+// First paragraph — intro name
+.paragraphs p.paragraph:first-of-type {
+	font-size:   22px;
+	font-weight: 600;
+	line-height: 1.5;
+
+	@include tablet {
+		font-size: 20px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+// Last paragraph — CTA card
+.paragraphs p.paragraph:last-of-type {
+	font-size:       20px;
+	font-weight:     700;
+	margin-top:      8px;
+	padding:         20px 28px;
+	background:      rgba(white, 0.12);
+	border-radius:   14px;
+	backdrop-filter: blur(4px);
+	border:          1px solid rgba(white, 0.18);
+	transition:      background 0.3s ease;
+
+	&:hover {
+		background: rgba(white, 0.18);
+	}
+
+	@include mobile {
+		font-size:     16px;
+		padding:       14px 18px;
+		border-radius: 12px;
+	}
+}

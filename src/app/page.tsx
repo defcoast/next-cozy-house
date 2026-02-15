@@ -9,6 +9,11 @@ import SectionSteps from '@/components/sections/SectionSteps/SectionSteps';
 import SectionNumbers from '@/components/sections/SectionNumbers/SectionNumbers';
 import Footer from '@/components/common/Footer/Footer';
 import SectionReviews from '@/components/sections/SectionReviews/SectionReviews';
+import SectionMiniForm from '@/components/sections/SectionMiniForm/SectionMiniForm';
+import SectionAboutMe from '@/components/sections/SectionAboutMe/SectionAboutMe';
+import SectionQuiz from '@/components/sections/SectionQuiz/SectionQuiz';
+import SectionFaq from '@/components/sections/SectionFaq/SectionFaq';
+import CostCalculator from '@/components/common/CostCalculator/CostCalculator';
 
 export default function Home() {
   return (
@@ -18,12 +23,17 @@ export default function Home() {
     <main>
       <SectionOffer />
       <SectionBenefits />
+      <SectionQuiz />
       <SectionAbout />
+      <CostCalculator />
       <SectionSteps />
+      <SectionMiniForm />
+      <SectionAboutMe />
       <SectionReviews />
       <SectionExample />
       <SectionNumbers />
       <SectionAdditional />
+      <SectionFaq />
       <SectionAction />
     </main>
 

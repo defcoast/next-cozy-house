@@ -3,7 +3,7 @@
 
 .offer {
 	background-color: $black;
-	padding-top:      104px;
+	padding-top:      50px;
 	position:         relative;
 	overflow:         hidden;
 
@@ -12,34 +12,11 @@
 	}
 }
 
-.tagline {
-	background:      url('../../../assets/images/offer/tagline.webp') no-repeat;
-	width:           330px;
-	height:          44px;
-	display:         flex;
-	text-align:      center;
-	align-items:     center;
-	justify-content: center;
-
-	@include tablet {
-		display: none;
-	}
-
-	&Text {
-		font-weight: 600;
-		font-size:   18px;
-		line-height: 1.25;
-		color:       $white;
-		margin-top:  3px;
-	}
-}
-
 .title {
-	font-size:   50px;
+	font-size:   36px;
 	line-height: 1.15;
 	color:       $primary;
 	max-width:   728px;
-	margin-top:  16px;
 	position:    relative;
 	z-index:     2;
 	font-family: var(--font-russo), var(--font-inter), sans-serif;
@@ -51,8 +28,7 @@
 	}
 
 	@include mobile {
-		font-size:  30px;
-		text-align: left;
+		font-size: 30px;
 	}
 
 	&Color {
@@ -72,22 +48,12 @@
 	max-width:      632px;
 	position:       relative;
 	z-index:        2;
-	display:        block;
 
 	@include tablet {
 		text-align: center;
 		max-width:  100%;
 		padding:    0 20px;
 		font-size:  20px;
-		display:    none;
-	}
-}
-
-.mobileDescription {
-	display: none;
-
-	@include tablet {
-		display: block;
 	}
 }
 
@@ -113,7 +79,7 @@
 	color:       $primary;
 	display:     flex;
 	align-items: center;
-	gap:         0 6px;
+	gap:         0 12px;
 	width:       100%;
 
 	@include tablet {
@@ -143,21 +109,21 @@
 	justify-content: center;
 
 	&Type {
-		&City {
+		&Roulete {
 			&:before {
-				content: url('../../../assets/images/offer/offer-geo.webp');
+				content: url('../../../assets/images/offer/offer-roulete.webp');
 			}
 		}
 
-		&Price {
+		&Speed {
 			&:before {
-				content: url('../../../assets/images/offer/offer-price.webp');
+				content: url('../../../assets/images/offer/offer-speed.webp');
 			}
 		}
 
-		&Guaranty {
+		&Discount {
 			&:before {
-				content: url('../../../assets/images/offer/offer-garant.webp');
+				content: url('../../../assets/images/offer/offer-discount.webp');
 			}
 		}
 	}
@@ -185,6 +151,7 @@
 	position:        absolute;
 	top:             0;
 	right:           -186px;
+	pointer-events:  none;
 
 	@include tablet {
 		width:           unset;

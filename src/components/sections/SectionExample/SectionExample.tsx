@@ -45,7 +45,7 @@ const SectionExample: FC = (): JSX.Element => {
 	]
 
 	return (
-	<section className={styles.examples}>
+	<section className={styles.examples} id="examples">
 		<Wrapper>
 			<AnimationTitle className={styles.title}>
 				<PaintedText color={SiteColorsEnum.BLACK}>Примеры</PaintedText>

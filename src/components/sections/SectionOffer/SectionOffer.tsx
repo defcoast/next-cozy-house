@@ -1,11 +1,8 @@
 'use client'
 
 import {FC, JSX} from 'react';
-import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
-import {tel, telegramLink} from '@/globalParams';
 import {domAnimation, LazyMotion, m} from 'framer-motion';
 import Wrapper from '../../common/Wrapper/Wrapper';
-import PaintedText from '../../common/PaintedText/PaintedText';
 import classNames from 'classnames';
 import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
 import styles from './SectionOffer.module.scss';
@@ -62,11 +59,6 @@ const SectionOffer: FC = (): JSX.Element => {
         hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
     }
 
-	const animationDescriptionMobile = {
-		visible: {x: 0, opacity: 1, transition: {duration: .5}},
-		hidden: {x: -200, opacity: 0, transition: {duration: 0.6}},
-	}
-
 	const handleAnchor = (id: string): void => {
 		const el = document.getElementById(id);
 		if (null === el) { return; }
@@ -79,12 +71,6 @@ const SectionOffer: FC = (): JSX.Element => {
     <section className={styles.offer}>
         <LazyMotion features={domAnimation}>
             <Wrapper>
-                <div className={styles.tagline}>
-                    <span className={styles.taglineText}>
-                        Геометрия пространства
-                    </span>
-                </div>
-
                 <m.h1
                 className={styles.title}
                 ref={refTitle}
@@ -92,40 +78,8 @@ const SectionOffer: FC = (): JSX.Element => {
                 animate={inViewTitle ? 'visible' : 'hidden'}
                 variants={animationTitle}
                 >
-                    Полусухая стяжка пола и механизированная штукатурка стен
+	                Полусухая стяжка пола и механизированная штукатурка стен во Владивостоке от 850 р/м2 с материалом
                 </m.h1>
-
-                <m.p
-                className={classNames(styles.description, styles.mobileDescription)}
-                ref={refDescriptionMobile}
-                initial="hidden"
-                animate={inViewDescriptionMobile ? 'visible' : 'hidden'}
-                variants={animationDescriptionMobile}
-                >
-                    Вся самая актуальная и полезная информация<br />
-                    <PaintedText color={SiteColorsEnum.PRIMARY}>
-	                    в нашем канале <br />
-                    </PaintedText>
-	                <PaintedText color={SiteColorsEnum.PRIMARY}>жми 👉</PaintedText>
-	                <a
-	                className={styles.tgLink}
-	                href={telegramLink}
-	                target="_blank"
-	                >
-		                <PaintedText
-		                color={SiteColorsEnum.WHITE}
-		                >
-			                Telegram
-		                </PaintedText>
-		                <Image
-		                src={IconTelegram}
-		                alt="Перейти в телеграм"
-		                width={20}
-		                height={20}
-		                className={styles.tg}
-		                />
-	                </a>
-                </m.p>
 
 	            <m.p
 	            className={styles.description}
@@ -134,29 +88,7 @@ const SectionOffer: FC = (): JSX.Element => {
 	            animate={inViewDescription ? 'visible' : 'hidden'}
 	            variants={animationDescription}
 	            >
-		            Вся самая актуальная и полезная информация<br />
-		            <PaintedText color={SiteColorsEnum.PRIMARY}>
-			            в нашем канале
-		            </PaintedText>
-		            <a
-		            className={styles.tgLink}
-		            href={telegramLink}
-		            target="_blank"
-		            >
-			            <PaintedText
-			            color={SiteColorsEnum.WHITE}
-			            >
-				            Telegram
-			            </PaintedText>
-			            <Image
-			            src={IconTelegram}
-			            alt="Перейти в телеграм"
-			            width={20}
-			            height={20}
-			            className={styles.tg}
-			            />
-		            </a>
-		            <PaintedText color={SiteColorsEnum.PRIMARY}>&nbsp;👈 жми</PaintedText>
+		            С оплатой по факту выполнения работ и гарантией 3 года по договору
 	            </m.p>
 
                 <ul className={styles.list}>
@@ -182,10 +114,6 @@ const SectionOffer: FC = (): JSX.Element => {
                     onClick={() => handleAnchor('action__form')}
                     >
                         Рассчитать стоимость работ
-                    </PrimaryBtn>
-
-                    <PrimaryBtn href={'tel:' + tel}>
-                        Позвонить
                     </PrimaryBtn>
                 </div>
             </Wrapper>

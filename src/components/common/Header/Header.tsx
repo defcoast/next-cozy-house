@@ -44,17 +44,25 @@ const Header: FC = (): JSX.Element => {
                     </span>
                 </div>
 
+
                 <div className={styles.mobileNumberBox}>
-                    <Tel className={styles.mobileNumber} />
+                    <div className={styles.mobileInfoWrapper}>
+                        <Tel className={styles.mobileNumber} />
+                    </div>
 
-                    {/** Мобильное меню (триггер). */}
-                    <span
-                    className={styles.burger}
-                    onClick={handleBurgerMenuClick}
-                    />
+                    <div className={styles.mobileSocialsWrapper}>
+                        <SocialList
+                        socialListData={[socialListData[0]]}
+                        className={styles.socialsMobile}
+                        />
+
+                        {/** Мобильное меню (триггер). */}
+                        <span
+                        className={styles.burger}
+                        onClick={handleBurgerMenuClick}
+                        />
+                    </div>
                 </div>
-
-
             </Wrapper>
 
             {/** Меню сайта. */}

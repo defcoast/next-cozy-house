@@ -1,0 +1,19 @@
+@import '../../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
+
+.section {
+	padding: 40px 0 40px;
+}
+
+.formTitle {
+	color:       $primary;
+	text-align:  center;
+	font-weight: 700;
+	font-size:   45px;
+	line-height: 1.15;
+
+	@include mobile {
+		text-align: left;
+		font-size:  26px;
+	}
+}

@@ -35,7 +35,7 @@ const AboutBox: FC = (): JSX.Element => {
 	        animate={inViewBoxPn ? 'visible' : 'hidden'}
 	        variants={animationBoxPn}
 	        >
-		        <h2 className={styles.title} style={{marginTop: 120}}>
+		        <h2 className={styles.title} style={{marginTop: 40}}>
 			        Что такое
 			        <PaintedText color={SiteColorsEnum.WHITE}>
 				        полусухая стяжка пола?
@@ -116,7 +116,7 @@ const AboutBox: FC = (): JSX.Element => {
 		                alt="Изображение процесса нанесения механизированной штукатурки"
 		                className={styles.img}
 		                fill
-		                sizes="(max-width: 768px) 100vw, 538px"
+		                sizes="(max-width: 768px) 100dvw, 538px"
 		                />
 	                </div>
                 </div>

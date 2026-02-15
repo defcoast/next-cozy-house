@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import {FC, JSX} from 'react';
 import styles from './SectionSteps.module.scss';

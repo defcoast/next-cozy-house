@@ -7,12 +7,17 @@ export interface IOfferListData {
 export const offerListData: IOfferListData[] = [
     {
         id: 1,
-        icon: 'City',
-        text: 'Владивосток и Приморский край',
+        icon: 'Roulete',
+        text: 'бесплатный замер',
     },
     {
         id: 2,
-        icon: 'Guaranty',
-        text: 'Гарантия 3 года',
+        icon: 'Discount',
+        text: 'скидки на материалы до 20%',
+    },
+    {
+        id: 3,
+        icon: 'Speed',
+        text: '250 м² за день',
     },
 ];
