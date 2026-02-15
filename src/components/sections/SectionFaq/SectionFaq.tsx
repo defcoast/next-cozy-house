@@ -106,7 +106,7 @@ const FAQ: FC = () => {
 						<span className={styles.icon}>{openIndex === index ? '−' : '+'}</span>
 					</button>
 					<div
-					ref={el => answerRefs.current[index] = el}
+					ref={(el) => { answerRefs.current[index] = el; }}
 					className={styles.answer}
 					>
 						<div className={styles.answerContent}>{item.answer}</div>
