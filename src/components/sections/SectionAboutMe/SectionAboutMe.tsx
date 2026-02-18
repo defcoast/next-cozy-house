@@ -3,9 +3,9 @@ import Wrapper from '@/components/common/Wrapper/Wrapper';
 import styles from './SectionAbout.module.scss';
 import PaintedText from '@/components/common/PaintedText/PaintedText';
 import {SiteColorsEnum} from '@/enums/SiteColorsEnum';
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import imgIgor from './igor.jpg';
+// import imgIgor from './igor.jpg';
 
 /** Секция: "О нашей компании". */
 const SectionAboutMe: FC = (): JSX.Element => {
@@ -22,14 +22,14 @@ const SectionAboutMe: FC = (): JSX.Element => {
 			</h2>
 
 			<div className={styles.content}>
-				<Image
-				src={imgIgor}
-				alt="Фото сотрудников компании"
-				sizes="(max-width: 768px) 100vw, 380px"
-				loading="lazy"
-				fetchPriority="low"
-				className={styles.img}
-				/>
+				{/*<Image*/}
+				{/*src={imgIgor}*/}
+				{/*alt="Фото сотрудников компании"*/}
+				{/*sizes="(max-width: 768px) 100vw, 380px"*/}
+				{/*loading="lazy"*/}
+				{/*fetchPriority="low"*/}
+				{/*className={styles.img}*/}
+				{/*/>*/}
 
 				<div className={styles.paragraphs}>
 					<p className={styles.paragraph}>Меня зовут Игорь, и я руковожу компанией «Уютный Дом»</p>
