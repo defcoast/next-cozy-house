@@ -1,9 +1,9 @@
 import {SocialsListData} from '@/components/common/SocialList/ISocialListData';
 
-import {instagramLink, telegramLink, whatsAppLink} from '@/globalParams';
+import {telegramLink, whatsAppLink} from '@/globalParams';
 
 import ImageTelegramLogo  from '../assets/images/socials/telegram.png'
-import ImageInstagramLogo from '../assets/images/socials/instagram.png'
+// import ImageInstagramLogo from '../assets/images/socials/instagram.png'
 import ImageWhatsAppLogo  from '../assets/images/socials/whatsApp.png'
 
 /** Данные для списка социальных сетей. */
@@ -15,12 +15,12 @@ export const socialListData: SocialsListData[] = [
         alt:        'Telegram',
     },
 
-    {
-        id:         2,
-        imagePath:  ImageInstagramLogo,
-        url:        instagramLink,
-        alt:        'Instagram',
-    },
+    // {
+    //     id:         2,
+    //     imagePath:  ImageInstagramLogo,
+    //     url:        instagramLink,
+    //     alt:        'Instagram',
+    // }, todo До лучших времен...
 
     {
         id:         3,
